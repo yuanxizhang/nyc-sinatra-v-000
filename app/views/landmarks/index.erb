@@ -1,24 +1,38 @@
-<h2>All Historical Landmarks</h2>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All Historical Landmarks</title>
+    <STYLE type="text/css">
+        H2 {border-color: grey; border-radius: 15px; border-width: 1px 1px 0px 0px;; border: dotted; text-align: center}
+        table {width: 50%;}
+    </STYLE>
+  </head>
+  <body>
+    <a class="button" href="/">Home</a>
+        
+    <a class="button" href="/figures">All Figures</a>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-    <th>Edit</th>
-  </tr>
+    <h2>All Historical Landmarks</h2>
 
-  
-  <% @landmarks.each do |landmark| %>
-  <tr>
-    <td> <a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></a></td>
-    <td><%= landmark.year_completed %></td>
-    <td> <a href="/landmarks/<%= landmark.id %>/edit">Edit</a></td>
-  </tr>
-  <% end %>
-  
-<table>
-<br>
-<br>
-<a class="button" href="/">Home</a>
-<br>
-<a class="button" href="/figures">All Figures</a>
+      <table align="center">
+        <tr>
+          <th>Name</th>
+          <th>Year Completed</th>
+          <th>Edit</th>
+        </tr>
+
+        <% @landmarks.each do |landmark| %>
+        <tr>
+          <td> <a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></a></td>
+          <td><%= landmark.year_completed %></td>
+          <td> <a href="/landmarks/<%= landmark.id %>/edit">Edit</a></td>
+        </tr>
+        <% end %>
+        
+      <table>
+        <br>
+        <a class="button" href="/landmarks/new"> Add New Landmark</a>
+        <br>
+        
+  </body>
+</html>

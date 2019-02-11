@@ -1,13 +1,20 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Year Completed</th>
-  </tr>
-  <tr>
-    <td><%= @landmark.name %></td>
-    <td><%= @landmark.year_completed %></td>
-  </tr>
-<table>
+<a class="button" href="/">Home</a>
+<a class="button" href="/landmarks">All Landmarks</a>
+<h1>Historical Landmark</h1>
+<div style="overflow-x:auto;">
+	<table>
+	  <tr>
+	    <th>Name</th>
+	    <th>Year Completed</th>
+	    <th>Historical Figure</th>
+	  </tr>
+	  <tr>
+	    <td><%= @landmark.name %></td>
+	    <td><%= @landmark.year_completed %></td>
+	    <td><%= @landmark.figure.name %></td>
+	  </tr>
+	<table>
+</div>
+<br><br>
+<a class="button" href="/landmarks/<%= @landmark.id %>/edit">Edit Landmark</a><br>
 
-<a class="button" href="/landmarks/<%= @landmark.id %>/edit">Edit Landmark</a>
-<a class="button" href="/landmarks">Landmarks</a>

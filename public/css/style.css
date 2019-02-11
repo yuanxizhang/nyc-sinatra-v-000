@@ -1,0 +1,82 @@
+table {
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit
+}
+
+tfoot {
+    display: table-footer-group;
+    vertical-align: middle;
+    border-color: inherit
+}
+
+table > tr {
+    vertical-align: middle;
+}
+
+col {
+    display: table-column
+}
+
+colgroup {
+    display: table-column-group
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit
+}
+
+th {
+    font-weight: bold
+}
+
+caption {
+    display: table-caption;
+    text-align: -webkit-center
+}
+
+body {
+    margin: 35px auto;
+    width: 640px;
+}
+ 
+header {
+    text-align: center;
+    margin: 0 0 20px;
+}
+ 
+header h1 {
+    display: inline;
+    font-size: 32px;
+}
+ 
+header h1 a:link, header h1 a:visited {
+    color: #444;
+    text-decoration: none;
+}
+ 
+header h2 {
+    font-size: 16px;
+    font-style: italic;
+    color: #999;
+}

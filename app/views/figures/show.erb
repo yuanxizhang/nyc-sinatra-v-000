@@ -1,0 +1,21 @@
+<a class="button" href="/">Home</a>
+<a class="button" href="/landmarks">All Landmarks</a>
+<a class="button" href="/figures">All Figures</a>
+<h1>Historical Figure: <%= @figure.name %></h1>
+<h2>Landmarks: </h2>
+<div style="overflow-x:auto;">
+	<table>
+	  <tr>
+	    <th>Landmark Name</th>
+	    <th>Year Completed</th>
+	  </tr>
+	  <% @figure.landmarks.each do |landmark| %>
+	  <tr>
+	    <td><%= landmark.name %></td>
+	    <td><%= landmark.year_completed %></td>
+	  </tr>
+	  <% end %>
+	<table>
+</div>
+
+<a class="button" href="/figures/<%= @figure.id %>/edit">Edit Figure</a><br>
