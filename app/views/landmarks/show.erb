@@ -1,17 +1,15 @@
 <a class="button" href="/">Home</a>
 <a class="button" href="/landmarks">All Landmarks</a>
-<h1>Historical Landmark</h1>
+<h1>Historical Landmark: <%= @landmark.name %></h1>
 <div style="overflow-x:auto;">
 	<table>
 	  <tr>
 	    <th>Name</th>
 	    <th>Year Completed</th>
-	    <th>Historical Figure</th>
 	  </tr>
 	  <tr>
 	    <td><%= @landmark.name %></td>
 	    <td><%= @landmark.year_completed %></td>
-	    <td><%= @landmark.figure.name %></td>
 	  </tr>
 	<table>
 </div>
